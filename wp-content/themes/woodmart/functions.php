@@ -379,19 +379,3 @@ if ( ! function_exists( 'woodmart_enqueue_inline_style_anchor' ) ) {
 	
 	add_action( 'wp_footer', 'woodmart_enqueue_inline_style_anchor', 10 );
 }
-
-function wpdocs_register_my_custom_menu_page() {
-    add_menu_page(
-        'Currency',
-        'Currency',
-        'manage_options',
-        'currency',
-        'custom_menu_callback'
-    );
-    function custom_menu_callback(){
-
-        require_once 'currency.php';
-    }
-
-}
-add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
